@@ -187,15 +187,3 @@ Version 1.0.0
 - Relying solely on model predictions to rule out disease could lead to missed diagnosis - false negatives must be carefully monitored.
 - Adhere to responsible AI practices such as maintaining transparency, evaluating bias/fairness and providing explainability to build appropriate user trust.
 
-By following deployment best practices and usage guidelines focused on clinical validity, safety, and responsibility, this model has the potential to provide valuable assistance improving retinal disease screening and detection.
-
-
-## Additional Notes
-- The model was trained using PyTorch and Python with an NVIDIA P100 GPU on a Kaggle environment. Key packages used include NumPy, Matplotlib, Pillow and Scikit-Learn.
-- The overall model architecture consists of a DenseNet-121 backbone pre-trained on ImageNet, with a customized classifier head and loss function added.
-- Training and validation was done on a large 103K image dataset. Test set was held out completely from model development.
-- Hyperparameter Tuning was carried out and various pre-trained model architectures such as ResNet, VGG and DenseNet families were explored.
-- Class imbalance was handled via weighted loss function.
-- The dataset consisted of OCT images sourced from [data.mendeley.com](https://data.mendeley.com/datasets/rscbjbr9sj/3)
-- Regular model monitoring, updated retraining, explainability and bias mitigation procedures should be implemented for production deployment.
-- Future work could explore multi-class classification, localization, ensemble techniques and comparative studies against other retinal image analysis techniques.
